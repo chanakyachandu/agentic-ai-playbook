@@ -1,0 +1,117 @@
+========================================================================================================================
+                      NOVATECH ELECTRONICS: CUSTOMER CARE FAQ & TECHNICAL RUNBOOK (2026)
+========================================================================================================================
+Knowledge Base ID : KB-FAQ-2026-V1
+Category          : Customer Support, Operational Procedures & Technical Edge Cases
+Maintenance Team  : Customer Experience Operations (cx-ops@novatech-electronics.com)
+Last Updated      : March 15, 2026
+========================================================================================================================
+
+Q01. What happens if my package is lost or stolen before delivery?
+     Answer: If carrier tracking indicates "Delivered" but you have not received your package, you must file a lost
+     package trace within 5 business days by emailing support@novatech-electronics.com. NovaTech coordinates directly
+     with UPS/FedEx to conduct a GPS scan investigation. If unresolved after 72 hours, a free replacement is shipped.
+
+Q02. Can I change my delivery address after placing an order?
+     Answer: Address modifications are permitted only within 45 minutes of order placement. Once warehouse
+     status transitions to "Pick & Pack", the address is locked and reroutes must be handled with the carrier.
+
+Q03. What is the price match guarantee policy?
+     Answer: NovaTech price-matches major certified retailers (Amazon Direct, Best Buy, B&H Photo) within 14 calendar
+     days of purchase. The competitor item must be identical, brand new in-box, and currently in-stock. Third-party
+     marketplace sellers and auction listings are strictly excluded from price matching.
+
+Q04. Does NovaTech offer student, military, or educator discounts?
+     Answer: Yes. Verified active students, educators, and military personnel receive an ongoing 10% discount on
+     eligible computing accessories and peripherals via our ID.me portal integration. Core laptop chassis and GPUs
+     are capped at a 5% maximum promotional discount.
+
+Q05. How do I return a bundle deal if I only want to keep one item?
+     Answer: Bundle purchases (e.g., Camera + Lens Kit) must be returned as a complete package to receive a full refund.
+     If a customer retains individual components from a bundle, the retained item is billed at its full standalone
+     MSRP price, and only the remaining net difference is refunded.
+
+Q06. What should I do if my screen arrives with dead pixels?
+     Answer: Displays with 3 or fewer isolated dead pixels conform to standard ISO-9241-307 Class II manufacturing
+     tolerances and are not classified as defective under basic warranty. Displays with 4 or more dead pixels, or any
+     cluster of 2 adjacent dead pixels, qualify for immediate complimentary RMA advance exchange within 30 days.
+
+Q07. Can I cancel a pre-order before it ships?
+     Answer: Pre-orders can be cancelled at any time prior to warehouse allocation for a 100% full refund with zero
+     cancellation penalty. Once credit cards are charged upon stock arrival, standard return procedures apply.
+
+Q08. What are the rules regarding refurbished and open-box items?
+     Answer: Certified Refurbished products include a comprehensive 6-month limited warranty and a 14-day return window.
+     Open-Box items sold in Grade-A condition include full remaining manufacturer warranty periods.
+
+Q09. How does international customs duty collection work for UK and European customers?
+     Answer: For shipments to the UK and Germany, orders are shipped Delivered At Place (DAP). Local customs offices
+     generate import VAT invoices directly through DHL Express. If a customer refuses customs duty payment, the package
+     is returned to our USA warehouse, and return logistics expenses ($35 flat rate) are deducted from the refund.
+
+Q10. Can I return a laptop if I already installed Linux or upgraded the internal RAM?
+     Answer: User hardware modifications (opening chassis or swapping SSD/RAM) do not void warranty unless damage
+     occurs during modification. However, for 14-day retail returns, the original factory components, original operating
+     system, and recovery partitions must be fully restored prior to warehouse return inspection.
+
+Q11. What is the policy for hazardous materials, lithium batteries, and drone air transit?
+     Answer: Devices containing standalone uninstalled lithium-ion batteries cannot ship via Next-Day Air due to FAA and
+     IATA cargo regulations. Such orders default automatically to Standard Ground transport.
+
+Q12. What happens if an item is damaged in transit by the carrier?
+     Answer: Customers must take clear photos of the damaged shipping box and report the issue within 48 hours
+     of delivery. A prepaid return label is generated, and a prioritized replacement order is dispatched immediately.
+
+Q13. How do gift receipts and holiday return extensions operate?
+     Answer: Purchases made between November 1 and December 24 qualify for our Extended Holiday Return Policy, allowing
+     returns through January 31 of the subsequent year. Returns accompanied by a gift receipt receive store credit only.
+
+Q14. How do I verify my device runtime hours for a camera or laptop return?
+     Answer: Our warehouse diagnostic scanners inspect internal NVMe S.M.A.R.T. controller power-on logs and camera
+     electronic shutter actuation counts. Devices recording over 10 cumulative operating hours are classified as used
+     and assessed the mandatory 15% open-box restocking fee.
+
+Q15. Can corporate business accounts receive Net-30 invoice terms?
+     Answer: Corporate accounts spending over $25,000 annually can apply for Net-30 credit lines upon credit check
+     approval by our corporate underwriting team (b2b-finance@novatech-electronics.com).
+
+Q16. What is the procedure if a customer reports unauthorized fraudulent purchases?
+     Answer: When fraud is flagged, our Security Operations Center immediately locks the customer profile, cancels
+     unfulfilled transit manifests with carrier intercept APIs, and routes the transaction to our fraud auditing queue.
+
+Q17. Are environmental electronic disposal and recycling fees refundable?
+     Answer: State electronic waste recycling fees (such as California eWaste fees) are non-refundable once the physical
+     item has been delivered, in accordance with state environmental compliance statutes.
+
+Q18. What happens if I return an item without all original box cables and adapters?
+     Answer: Missing accessories incur standard replacement deductions: $15 for missing HDMI/USB-C cables, and $45 for
+     missing proprietary high-wattage AC charging bricks.
+
+Q19. How do I upgrade from Silver Tier to Gold Tier in NovaClub?
+     Answer: Tier status upgrades automatically within 24 hours of total qualifying annual spend reaching $1,000.00.
+     Qualifying spend excludes shipping fees, sales taxes, and returned merchandise totals.
+
+Q20. Can loyalty points be redeemed on promotional or Black Friday doorbuster items?
+     Answer: Yes. NovaClub points convert into cash voucher codes that function as standard payment tenders, valid on
+     all catalog items including clearance and doorbuster promotions.
+
+Q21. How does the NovaCare accidental replacement claim work?
+     Answer: Customers initiate claims via the online portal, submit photo proof of the cracked screen or water spill,
+     pay the $50 deductible fee, and receive an advance replacement unit with a prepaid box to return the damaged item.
+
+Q22. What is the maximum number of items allowed per order for high-demand GPU releases?
+     Answer: To combat scalping bots, new-generation graphics cards and limited consoles are restricted to
+     a strict limit of 1 unit per customer and household address. Duplicate orders are automatically purged.
+
+Q23. Does NovaTech provide trade-in credits for older electronics?
+     Answer: Yes. Customers can input older device serial numbers into our Trade-In calculator to receive instant
+     estimated quotes. Once the device arrives at our inspection depot, digital store credit is credited within 3 days.
+
+Q24. What are the customer support phone operating hours?
+     Answer: Toll-free phone support (+1-800-555-0199) operates Monday through Friday from 8:00 AM to 8:00 PM EST,
+     and Saturdays from 9:00 AM to 5:00 PM EST. Platinum VIP members receive dedicated 24/7/365 priority routing.
+
+Q25. How do I initiate a formal legal dispute or binding arbitration request?
+     Answer: Formal legal correspondence must be served via certified mail to NovaTech Legal Operations, 500 Technology
+     Way, Suite 400, Austin, TX 78701, in accordance with Section 14 of our Terms of Service.
+========================================================================================================================

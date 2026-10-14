@@ -1,0 +1,51 @@
+========================================================================================================================
+             [ARCHIVED] NOVATECH ELECTRONICS: HISTORICAL STORE POLICY (YEAR 2024 EDITION)
+========================================================================================================================
+Document ID      : DOC-POL-2024-V1
+Document Status  : ARCHIVED // SUPERSEDED BY 2026.2 // RETAINED FOR HISTORICAL AUDIT & DISPUTES ONLY
+Effective Period : January 1, 2024 - December 31, 2024
+Customer Support : support-archive@novatech-electronics.com
+Notice           : All purchases made on or after March 1, 2026 are governed exclusively by Policy 2026.2.
+========================================================================================================================
+
+
+SECTION 1: HISTORICAL 2024 RETURNS & REFUNDS TERMS
+------------------------------------------------------------------------------------------------------------------------
+
+1.1 Strict 14-Day Universal Return Window:
+    Under 2024 terms, all purchases were subject to a strict 14-calendar-day return window from delivery date. No
+    exceptions were granted for non-electronics or general accessories.
+
+1.2 Mandatory 20% Restocking Fee:
+    A mandatory 20% restocking fee was deducted from all opened, returned items regardless of condition, unless the
+    unit was certified dead-on-arrival by an authorized technician within 48 hours of receipt.
+
+1.3 Store Credit Only for Opened Goods:
+    Refunds for opened electronics were issued exclusively as NovaTech Digital Store Credit vouchers valid for 180 days.
+    Direct cash refunds were restricted to unopened merchandise with intact factory shrink-wrap.
+
+
+SECTION 2: HISTORICAL 2024 SHIPPING & LOGISTICS GUIDELINES
+------------------------------------------------------------------------------------------------------------------------
+
+2.1 Domestic Shipping Tiers:
+    * Standard Ground Delivery : $7.99 flat rate. Free only on orders of $75.00 or more.
+    * 2-Day Air Courier        : $19.99 flat rate.
+    * Overnight Rush           : $39.99 flat rate.
+
+2.2 Geographic Coverage Restrictions:
+    In 2024, NovaTech shipped exclusively to the continental United States and Canada. No European or Asian shipping
+    destinations were supported under logistics agreement LOG-2024-A.
+
+
+SECTION 3: HISTORICAL 2024 WARRANTY LIMITATIONS
+------------------------------------------------------------------------------------------------------------------------
+
+3.1 Limited 90-Day Parts & Labor Warranty:
+    The 2024 base warranty covered hardware defects for exactly 90 calendar days from invoice date. Factory-refurbished
+    merchandise included a 30-day limited guarantee.
+
+3.2 Battery & Screen Exclusions:
+    Batteries were considered consumable components and were explicitly excluded from warranty coverage after 30 days.
+    Display screens were only eligible for RMA replacement if showing 5 or more clustered dead pixels.
+========================================================================================================================

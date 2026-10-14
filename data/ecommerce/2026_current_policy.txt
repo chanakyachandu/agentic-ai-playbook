@@ -1,0 +1,126 @@
+========================================================================================================================
+                      NOVATECH ELECTRONICS: GLOBAL STORE POLICY & CUSTOMER CARE HANDBOOK
+========================================================================================================================
+Document ID      : DOC-POL-2026-V2
+Document Status  : CURRENT // EFFECTIVE MARCH 1, 2026
+Document Version : 2026.2 (Replaces all previous 2024 and 2025 editions)
+Support Contact  : support@novatech-electronics.com | Toll-Free: +1-800-555-0199
+Official Website : https://www.novatech-electronics.com
+Scope            : Applicable to all online orders, retail purchases, and customer service inquiries.
+========================================================================================================================
+
+
+SECTION 1: RETURNS, REFUNDS & REPLACEMENTS POLICY
+------------------------------------------------------------------------------------------------------------------------
+
+1.1 Standard 30-Day Return Window:
+    Customers may return eligible items within 30 calendar days from the delivery date for a full refund back to the
+    original payment method. Products must be in original condition, with original packaging, manuals, and accessories.
+
+1.2 Electronics & High-Value Exceptions (14-Day Limit):
+    Laptops, desktop computers, digital cameras, drones, and smartphones have a restricted 14-calendar-day return
+    window from the delivery date. Items must show fewer than 10 cumulative hours of device runtime to qualify.
+
+1.3 Restocking Fees:
+    * Defective or Damaged Upon Arrival: $0 restocking fee. A prepaid return shipping label is provided immediately.
+    * Opened, Non-Defective Items: A 15% restocking fee is deducted from the refund total to cover repackaging.
+    * Unopened Items: $0 restocking fee if original manufacturer box seal is intact.
+
+1.4 Non-Returnable & Final Sale Items:
+    The following items cannot be returned or refunded under any circumstances:
+    * Digital gift cards and prepaid store credit codes.
+    * Downloadable software licenses and digital game keys once delivered via email.
+    * Custom-configured or personalized engraved devices (e.g. customized laptop chassis).
+    * In-ear headphones and earbuds once the sanitary plastic seal has been broken.
+
+1.5 Refund Processing Timelines:
+    Once the return package is received and inspected at our central fulfillment warehouse, refunds are initiated within
+    48 business hours. Funds typically appear on the customer's credit card or bank account within 5 to 7 business days.
+
+
+SECTION 2: SHIPPING RATES, DELIVERY TIERS & ORDER TRACKING
+------------------------------------------------------------------------------------------------------------------------
+
+2.1 Domestic Delivery Options (Continental United States):
+    * Standard Ground Shipping : $4.99 flat rate. FREE on all domestic orders of $50.00 or more. Delivers in 3 to 5
+      business days via UPS or FedEx Ground.
+    * Express 2-Day Air        : $14.99 flat rate. Guaranteed delivery within 2 business days.
+    * Overnight Priority Rush  : $29.99 flat rate. Guaranteed next-business-day delivery. Orders must be submitted
+      before 1:00 PM EST to ship the same day.
+
+2.2 Signature Requirement for High-Value Orders:
+    All shipments containing order totals of $500.00 or higher automatically require a direct adult signature (age 21+)
+    upon delivery. Couriers are strictly prohibited from leaving packages unattended on porches or doorsteps.
+
+2.3 International Shipping Coverage & Customs:
+    NovaTech currently ships to 5 countries only: United States, Canada, United Kingdom, Germany, and Japan.
+    * All international orders deliver within 7 to 12 business days via DHL Express.
+    * International import taxes, customs duties, and local VAT are the sole responsibility of the customer and are
+      collected by DHL prior to delivery. NovaTech does not calculate or refund foreign customs fees.
+
+
+SECTION 3: WARRANTY COVERAGE & REPAIR SERVICES
+------------------------------------------------------------------------------------------------------------------------
+
+3.1 Standard 1-Year Limited Hardware Warranty:
+    Every new device purchased directly from NovaTech includes a complimentary 1-year limited hardware warranty
+    commencing on the original invoice date.
+
+3.2 What the Standard Warranty Covers:
+    * Internal motherboard, CPU, and GPU hardware component failures.
+    * Display screen defects with more than 3 dead or stuck pixels.
+    * Internal battery capacity degradation below 80% of original rated capacity within the first 12 months.
+    * AC power adapters and charging cables exhibiting manufacturing defects.
+
+3.3 What the Standard Warranty Does NOT Cover:
+    * Accidental drops, shattered screens, cracked chassis, or structural impact damage.
+    * Liquid spills, water submersion, corrosion, or humidity damage.
+    * Unauthorized third-party disassembly, unofficial software rooting, or aftermarket modifications.
+    * Normal cosmetic wear, scratches, scuffs, and minor battery wear above 80% capacity.
+
+3.4 NovaCare Extended Protection Plans:
+    Customers can purchase optional 3-year NovaCare Protection within 30 days of hardware purchase:
+    * Laptops & Desktops : $79.99 one-time fee.
+    * Audio & Cameras    : $39.99 one-time fee.
+    * Benefits: Covers up to 2 accidental damage replacements per year (drops or spills) with a fixed $50 deductible.
+
+
+SECTION 4: NOVACLUB VIP LOYALTY & REWARDS PROGRAM
+------------------------------------------------------------------------------------------------------------------------
+
+NovaClub is our customer rewards tier system designed to give frequent shoppers discounts, extended return periods,
+and priority customer support. Tiers are automatically calculated based on annual spending.
+
++------------------+-----------------------+-------------------------+--------------------+-------------------------+
+| MEMBERSHIP TIER  | ANNUAL SPEND QUALIFY  | REWARD POINTS EARNED    | RETURN WINDOW      | SHIPPING BENEFIT        |
++------------------+-----------------------+-------------------------+--------------------+-------------------------+
+| Silver Tier      | Free (Automatic)      | 1.0 point per $1 spent  | Standard 30 days   | Free over $50           |
+| Gold Tier        | Spend $1,000 / year   | 1.5 points per $1 spent | Extended 45 days   | Free Express 2-Day      |
+| Platinum Tier    | Spend $3,000 / year   | 2.0 points per $1 spent | Extended 60 days   | Free Overnight Priority |
++------------------+-----------------------+-------------------------+--------------------+-------------------------+
+
+4.1 Restocking Fee Waiver:
+    * Platinum Tier members enjoy 100% waived restocking fees on all opened non-defective electronics returns.
+    * Silver and Gold Tier members are subject to the standard 15% restocking fee on opened non-defective returns.
+
+4.2 Rewards Redemption:
+    Accumulated points never expire as long as the account has at least one purchase every 12 months. Points can be
+    redeemed at checkout at a conversion rate of 500 points = $10.00 store credit voucher.
+
+
+SECTION 5: CUSTOMER PRIVACY, SECURITY & DATA RETENTION
+------------------------------------------------------------------------------------------------------------------------
+
+5.1 Data Collection & Payment Security:
+    NovaTech processes payments using PCI-DSS Level 1 tokenization. We never store complete credit card numbers
+    or CVV security codes on our servers. Only the last 4 digits of the card and card brand are retained for receipts.
+
+5.2 Inactive Data Retention Period:
+    Customer transaction and invoice records are stored in secure, encrypted cloud cold-storage for exactly 7 years
+    to comply with federal tax and auditing regulations, after which records are permanently purged.
+
+5.3 Right to Deletion & Account Erasure (GDPR / CCPA):
+    Customers may request complete erasure of their personal profile, marketing subscriptions, and browsing telemetry
+    by emailing privacy@novatech-electronics.com or submitting a ticket at our customer portal. Erasure requests are
+    processed within 30 calendar days.
+========================================================================================================================

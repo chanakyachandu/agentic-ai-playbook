@@ -1,0 +1,292 @@
+[
+  {
+    "order_id": "ORD-2026-1001",
+    "customer": {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone": "+1-415-555-0142",
+      "vip_tier": "Silver",
+      "country": "United States"
+    },
+    "purchase_date": "2026-03-16",
+    "delivery_date": "2026-03-19",
+    "item": {
+      "sku": "LAP-MBP16-M3",
+      "product_name": "Apple MacBook Pro 16\" (M3 Max / 36GB / 1TB)",
+      "category": "Laptops",
+      "unit_price_usd": 3499.00,
+      "condition": "Opened - Minor Use",
+      "runtime_hours": 6.5,
+      "factory_seal_intact": false,
+      "has_original_packaging": true,
+      "missing_accessories": []
+    },
+    "order_total_usd": 3499.00,
+    "shipping_method": "Overnight Priority Rush ($29.99)",
+    "signature_recorded": true,
+    "payment_card_last4": "4242",
+    "return_request_date": "2026-03-27",
+    "policy_audit_grounding": "Eligible for return (Day 8 <= 14-day laptop limit and runtime 6.5 <= 10 hrs). 15% restocking fee ($524.85) applies for Silver tier."
+  },
+  {
+    "order_id": "ORD-2026-1002",
+    "customer": {
+      "name": "Sarah Connor",
+      "email": "sarah.connor@cyberdyne.org",
+      "phone": "+1-310-555-0198",
+      "vip_tier": "Gold",
+      "country": "United States"
+    },
+    "purchase_date": "2026-02-15",
+    "delivery_date": "2026-02-18",
+    "item": {
+      "sku": "CAM-SONY-A7IV",
+      "product_name": "Sony Alpha a7 IV Full-Frame Mirrorless Camera",
+      "category": "Digital Cameras",
+      "unit_price_usd": 2498.00,
+      "condition": "Opened - Heavy Studio Use",
+      "runtime_hours": 34.0,
+      "factory_seal_intact": false,
+      "has_original_packaging": true,
+      "missing_accessories": []
+    },
+    "order_total_usd": 2498.00,
+    "shipping_method": "Express 2-Day Air (Free Gold Perk)",
+    "signature_recorded": true,
+    "payment_card_last4": "8812",
+    "return_request_date": "2026-03-25",
+    "policy_audit_grounding": "Ineligible for return. Even though Gold tier has a 45-day return window, electronics are capped at 14 days and runtime hours exceed 10-hour limit (34.0 hours)."
+  },
+  {
+    "order_id": "ORD-2026-1003",
+    "customer": {
+      "name": "Bruce Wayne",
+      "email": "bruce.wayne@wayne-enterprises.internal",
+      "phone": "+1-212-555-0100",
+      "vip_tier": "Platinum",
+      "country": "United States"
+    },
+    "purchase_date": "2026-02-05",
+    "delivery_date": "2026-02-08",
+    "item": {
+      "sku": "DRN-DJI-M4P",
+      "product_name": "DJI Mini 4 Pro Drone Fly More Combo",
+      "category": "Drones",
+      "unit_price_usd": 1099.00,
+      "condition": "Brand New - Factory Box Seal Intact",
+      "runtime_hours": 0.0,
+      "factory_seal_intact": true,
+      "has_original_packaging": true,
+      "missing_accessories": []
+    },
+    "order_total_usd": 1099.00,
+    "shipping_method": "Free Overnight Priority (Platinum Perk)",
+    "signature_recorded": true,
+    "payment_card_last4": "9901",
+    "return_request_date": "2026-03-24",
+    "policy_audit_grounding": "Eligible for return (Day 44 <= 60-day Platinum window). 0% restocking fee because factory seal is intact and Platinum restocking fee is waived."
+  },
+  {
+    "order_id": "ORD-2026-1004",
+    "customer": {
+      "name": "Peter Parker",
+      "email": "peter.parker@dailybugle.com",
+      "phone": "+1-718-555-0155",
+      "vip_tier": "Silver",
+      "country": "United States"
+    },
+    "purchase_date": "2026-03-20",
+    "delivery_date": "2026-03-23",
+    "item": {
+      "sku": "AUD-SONY-WF1000",
+      "product_name": "Sony WF-1000XM5 True Wireless Earbuds",
+      "category": "Audio",
+      "unit_price_usd": 298.00,
+      "condition": "Opened - Sanitary Seal Torn",
+      "runtime_hours": 3.0,
+      "factory_seal_intact": false,
+      "has_original_packaging": true,
+      "missing_accessories": []
+    },
+    "order_total_usd": 298.00,
+    "shipping_method": "Standard Ground (Free over $50)",
+    "signature_recorded": false,
+    "payment_card_last4": "1049",
+    "return_request_date": "2026-03-26",
+    "policy_audit_grounding": "Ineligible for return. Section 1.4 strictly classifies in-ear headphones and earbuds as non-returnable once the sanitary plastic seal is broken."
+  },
+  {
+    "order_id": "ORD-2026-1005",
+    "customer": {
+      "name": "Diana Prince",
+      "email": "diana.prince@themiscira-museum.org",
+      "phone": "+1-202-555-0177",
+      "vip_tier": "Gold",
+      "country": "United States"
+    },
+    "purchase_date": "2026-03-01",
+    "delivery_date": "2026-03-05",
+    "item": {
+      "sku": "MON-ASUS-PG32U",
+      "product_name": "ASUS ROG Swift 32\" 4K OLED Gaming Monitor",
+      "category": "Monitors",
+      "unit_price_usd": 1299.00,
+      "condition": "Defective Hardware - Dead Pixels",
+      "runtime_hours": 15.0,
+      "factory_seal_intact": false,
+      "has_original_packaging": true,
+      "missing_accessories": []
+    },
+    "order_total_usd": 1299.00,
+    "shipping_method": "Express 2-Day Air",
+    "signature_recorded": true,
+    "payment_card_last4": "3341",
+    "return_request_date": "2026-03-22",
+    "policy_audit_grounding": "Eligible for immediate advance warranty replacement. Screen exhibits 5 clustered dead pixels, meeting the Section 3.2 defect threshold (> 3 dead pixels). $0 fee."
+  },
+  {
+    "order_id": "ORD-2026-1006",
+    "customer": {
+      "name": "Clark Kent",
+      "email": "clark.kent@dailyplanet.com",
+      "phone": "+1-312-555-0133",
+      "vip_tier": "Silver",
+      "country": "United States"
+    },
+    "purchase_date": "2026-01-20",
+    "delivery_date": "2026-01-24",
+    "item": {
+      "sku": "KEY-LOGI-MXMEC",
+      "product_name": "Logitech MX Mechanical Wireless Keyboard",
+      "category": "Accessories",
+      "unit_price_usd": 169.99,
+      "condition": "Opened - Excellent Condition",
+      "runtime_hours": 120.0,
+      "factory_seal_intact": false,
+      "has_original_packaging": true,
+      "missing_accessories": []
+    },
+    "order_total_usd": 169.99,
+    "shipping_method": "Standard Ground ($4.99)",
+    "signature_recorded": false,
+    "payment_card_last4": "7714",
+    "return_request_date": "2026-03-25",
+    "policy_audit_grounding": "Ineligible for return. Return requested on Day 60, well past the standard 30-day return window for Silver tier."
+  },
+  {
+    "order_id": "ORD-2026-1007",
+    "customer": {
+      "name": "Tony Stark",
+      "email": "tony@stark-industries.com",
+      "phone": "+1-212-555-0199",
+      "vip_tier": "Platinum",
+      "country": "United States"
+    },
+    "purchase_date": "2026-03-10",
+    "delivery_date": "2026-03-14",
+    "item": {
+      "sku": "LAP-RAZER-18-CUS",
+      "product_name": "Razer Blade 18 Custom Laser-Engraved Laptop Chassis",
+      "category": "Laptops",
+      "unit_price_usd": 4299.00,
+      "condition": "Opened - Custom Engraving 'ARC-REACTOR-V8'",
+      "runtime_hours": 4.0,
+      "factory_seal_intact": false,
+      "has_original_packaging": true,
+      "missing_accessories": []
+    },
+    "order_total_usd": 4299.00,
+    "shipping_method": "Free Overnight Priority (Platinum Perk)",
+    "signature_recorded": true,
+    "payment_card_last4": "0007",
+    "return_request_date": "2026-03-20",
+    "policy_audit_grounding": "Ineligible for return. Section 1.4 explicitly bars personalized laser-engraved or custom-configured hardware as final sale with zero refunds."
+  },
+  {
+    "order_id": "ORD-2026-1008",
+    "customer": {
+      "name": "Natasha Romanoff",
+      "email": "natasha@shield-ops.gov",
+      "phone": "+1-202-555-0188",
+      "vip_tier": "Gold",
+      "country": "United States"
+    },
+    "purchase_date": "2025-08-10",
+    "delivery_date": "2025-08-14",
+    "item": {
+      "sku": "PWR-DELL-130W",
+      "product_name": "Dell 130W USB-C AC Power Adapter",
+      "category": "Power Accessories",
+      "unit_price_usd": 89.99,
+      "condition": "Fails to Deliver Power - Manufacturing Defect",
+      "runtime_hours": 900.0,
+      "factory_seal_intact": false,
+      "has_original_packaging": false,
+      "missing_accessories": []
+    },
+    "order_total_usd": 89.99,
+    "shipping_method": "Standard Ground",
+    "signature_recorded": false,
+    "payment_card_last4": "5521",
+    "return_request_date": "2026-03-18",
+    "policy_audit_grounding": "Eligible for warranty replacement. Commenced 7 months ago, within the complimentary 1-year limited hardware warranty (Section 3.1 & 3.2)."
+  },
+  {
+    "order_id": "ORD-2026-1009",
+    "customer": {
+      "name": "Barry Allen",
+      "email": "barry.allen@ccpd.gov",
+      "phone": "+1-312-555-0144",
+      "vip_tier": "Silver",
+      "country": "United States"
+    },
+    "purchase_date": "2026-03-24",
+    "delivery_date": "2026-03-24",
+    "item": {
+      "sku": "SFW-MS-OFFICE-PRO",
+      "product_name": "Microsoft Office 2024 Professional (Digital License Key)",
+      "category": "Software",
+      "unit_price_usd": 249.99,
+      "condition": "Digital Key Delivered via Email",
+      "runtime_hours": 0.0,
+      "factory_seal_intact": false,
+      "has_original_packaging": false,
+      "missing_accessories": []
+    },
+    "order_total_usd": 249.99,
+    "shipping_method": "Instant Digital Delivery ($0)",
+    "signature_recorded": false,
+    "payment_card_last4": "6632",
+    "return_request_date": "2026-03-25",
+    "policy_audit_grounding": "Ineligible for return. Section 1.4 strictly classifies downloadable software licenses and game keys as non-refundable once delivered via email."
+  },
+  {
+    "order_id": "ORD-2026-1010",
+    "customer": {
+      "name": "Arthur Curry",
+      "email": "arthur@atlantis-ocean.org",
+      "phone": "+1-206-555-0166",
+      "vip_tier": "Silver",
+      "country": "United States"
+    },
+    "purchase_date": "2026-01-10",
+    "delivery_date": "2026-01-15",
+    "item": {
+      "sku": "AUD-JBL-BOOMBOX",
+      "product_name": "JBL Boombox 3 Portable Bluetooth Speaker",
+      "category": "Audio",
+      "unit_price_usd": 499.95,
+      "condition": "Saltwater Submersion - Corroded Internal Ports",
+      "runtime_hours": 45.0,
+      "factory_seal_intact": false,
+      "has_original_packaging": true,
+      "missing_accessories": []
+    },
+    "order_total_usd": 499.95,
+    "shipping_method": "Standard Ground",
+    "signature_recorded": false,
+    "payment_card_last4": "8899",
+    "return_request_date": "2026-03-26",
+    "policy_audit_grounding": "Ineligible for standard warranty. Section 3.3 explicitly excludes liquid spills and water corrosion unless customer purchased NovaCare Extended Protection."
+  }
+]

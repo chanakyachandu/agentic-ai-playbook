@@ -1,0 +1,101 @@
+========================================================================================================================
+                      NOVATECH ELECTRONICS: RAW INCOMING CUSTOMER SUPPORT INQUIRIES
+========================================================================================================================
+Batch Identifier : BATCH-2026-03-INBOUND
+Description      : Unsanitized incoming customer support messages with real-world PII, slang, typos, and intents.
+Usage            : Used for Module T1 (PII Masking), Module T6 (Intent Routing), and Module T8 (ReAct Agent Execution).
+========================================================================================================================
+
+--- INQUIRY #1 ---
+Customer Name : John Doe
+Raw Message   :
+"Hi support, I bought a MacBook Pro 16 inch last week (order ORD-2026-1001). My email is john.doe@example.com and phone
+is 415-555-0142. It was delivered on March 19th. I only used it for about 6 hours for editing, but the screen is just
+too big for my travel backpack. I want to return it for a refund to my credit card ending in 4242. Am I within the
+window and will I be charged any restocking fee?"
+Expected Intent : RETURN_REQUEST
+Ground Truth    : Approved (Day 8 <= 14-day laptop window; runtime 6.5 <= 10 hrs). 15% restocking fee ($524.85) applies.
+
+--- INQUIRY #2 ---
+Customer Name : Sarah Connor
+Raw Message   :
+"Listen, this is Sarah Connor (sarah.connor@cyberdyne.org, phone: 310-555-0198). I have order ORD-2026-1002 for that
+Sony a7 IV camera delivered back on Feb 18. I am a Gold Tier VIP member! The website says Gold members get 45 days
+to return stuff. I have had it for 35 days and put around 34 hours of shooting on it, but now I want to return it
+for a full cash refund. Send me the prepaid label right now."
+Expected Intent : RETURN_REQUEST
+Ground Truth    : Rejected. Electronics are capped at 14 days and runtime hours exceed the 10-hour limit.
+
+--- INQUIRY #3 ---
+Customer Name : Bruce Wayne
+Raw Message   :
+"Good afternoon. My name is Bruce Wayne, order ORD-2026-1003. You can reach my office
+at bruce.wayne@wayne-enterprises.internal or 212-555-0100. I ordered a DJI Mini 4 Pro drone on Feb 5th.
+It has been sitting in my office unopened with the original factory seal completely untouched.
+As a Platinum member, I understand I have 60 days. Please verify if I qualify for a full refund."
+Expected Intent : RETURN_REQUEST
+Ground Truth    : Approved (Day 44 <= 60 days for Platinum). Restocking fee 0% because factory box seal is intact.
+
+--- INQUIRY #4 ---
+Customer Name : Peter Parker
+Raw Message   :
+"Hey guys, Peter here (peter.parker@dailybugle.com / 718-555-0155). Order ORD-2026-1004. I got the Sony WF-1000XM5
+earbuds three days ago. I opened the box and broke the plastic sanitary seal to try them on for 20 minutes, but they
+hurt my ears. Can I return them for store credit or refund?"
+Expected Intent : RETURN_REQUEST
+Ground Truth    : Rejected. Section 1.4 strictly bars in-ear headphones and earbuds once sanitary seal is broken.
+
+--- INQUIRY #5 ---
+Customer Name : Diana Prince
+Raw Message   :
+"Hello Customer Care, Diana Prince writing regarding order ORD-2026-1005 (diana.prince@themiscira-museum.org,
+phone: 202-555-0177). My ASUS ROG 32 inch 4K gaming monitor arrived on March 5th. Yesterday I noticed 5 bright
+dead pixels in a cluster near the center of the display. Does your warranty cover an exchange for this?"
+Expected Intent : WARRANTY_CLAIM
+Ground Truth    : Approved. Display has > 3 dead pixels (Section 3.2), qualifying for advance RMA exchange.
+
+--- INQUIRY #6 ---
+Customer Name : Clark Kent
+Raw Message   :
+"Hi support, Clark Kent here (clark.kent@dailyplanet.com / 312-555-0133). Order ORD-2026-1006. I bought a Logitech
+mechanical keyboard back in January and it was delivered on Jan 24. It works fine, but I switched to an ergonomic
+keyboard today. Can I send it back for a refund?"
+Expected Intent : RETURN_REQUEST
+Ground Truth    : Rejected. Return requested on Day 60, well past the standard 30-day return window for Silver tier.
+
+--- INQUIRY #7 ---
+Customer Name : Tony Stark
+Raw Message   :
+"Stark here. Order ORD-2026-1007. I had you laser engrave 'ARC-REACTOR-V8' on the titanium lid of that Razer Blade 18
+(contact: tony@stark-industries.com / 212-555-0199). I don't like the font weight. I want to return the machine and
+have you refund the $4,299 to my American Express card. I am a Platinum member so don't give me any friction."
+Expected Intent : RETURN_REQUEST
+Ground Truth    : Rejected. Section 1.4 strictly bars custom-configured or laser-engraved hardware as final sale.
+
+--- INQUIRY #8 ---
+Customer Name : Natasha Romanoff
+Raw Message   :
+"Hello, Natasha Romanoff (natasha@shield-ops.gov / 202-555-0188). Order ORD-2026-1008 for a Dell 130W USB-C charger
+purchased in August 2025. The charger stopped delivering power yesterday. The cable is intact with no physical
+damage. Is this covered under warranty?"
+Expected Intent : WARRANTY_CLAIM
+Ground Truth    : Approved. Commenced 7 months ago, within the 1-year hardware warranty (Section 3.1 & 3.2).
+
+--- INQUIRY #9 ---
+Customer Name : Barry Allen
+Raw Message   :
+"Hey! Barry Allen here (barry.allen@ccpd.gov / 312-555-0144). Order ORD-2026-1009. I bought Microsoft Office 2024
+about an hour ago and received the digital product key via email. My company ended up giving me a free work license
+right after. Can I return the key for a refund?"
+Expected Intent : RETURN_REQUEST
+Ground Truth    : Rejected. Section 1.4 classifies digital software licenses as non-refundable once delivered via email.
+
+--- INQUIRY #10 ---
+Customer Name : Arthur Curry
+Raw Message   :
+"Arthur Curry (arthur@atlantis-ocean.org / 206-555-0166). Order ORD-2026-1010. I bought the JBL Boombox 3 portable
+speaker. It was dropped in the harbor and now the internal charging ports are completely corroded with saltwater.
+Will the 1-year warranty cover a free repair or replacement?"
+Expected Intent : WARRANTY_CLAIM
+Ground Truth    : Rejected. Section 3.3 explicitly excludes liquid spills and corrosion unless NovaCare was purchased.
+========================================================================================================================
