@@ -24,7 +24,7 @@ def plan_tasks(goal: str) -> List[str]:
     order_id = order_match.group(0) if order_match else "Target Order"
 
     plan = [
-        f"Step 1: Locate {order_id} in orders database and extract item category, delivery date, and purchase price.",
+        f"Step 1: Locate {order_id} in orders JSON file (orders_database.json) and extract item category, delivery date, and purchase price.",
         f"Step 2: Check store return policy conditions for the item category (return window days & maximum runtime hours).",
         f"Step 3: Calculate net refund after applying restocking fee policies.",
         f"Step 4: Check Human-in-the-Loop (HITL) approval threshold ($500) and execute or hold refund.",

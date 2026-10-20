@@ -37,6 +37,15 @@ venv.bak/
 .env
 *.env.local
 
+# Developer Cheatsheets, Private Reference Notes & Local Notebooks
+*CHEATSHEET*
+*PROJECT_FLOW_EXPLANATION*
+*project_flow_explaination*
+*.ipynb
+**/*.ipynb
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
 # IDE & Editor Files
 .vscode/
 .idea/

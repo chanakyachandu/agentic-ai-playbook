@@ -15,6 +15,14 @@ except ImportError:
     from tools import get_tools_registry, execute_tool
 
 load_dotenv()
+if not os.getenv("GEMINI_API_KEY"):
+    for cand in [
+        os.path.join("..", ".env"),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".env"),
+    ]:
+        if os.path.exists(cand):
+            load_dotenv(cand)
+            break
 
 
 def format_tools_prompt(registry: Dict[str, Any]) -> str:
@@ -88,11 +96,15 @@ def run_react_agent(
                 "You are an enterprise customer service AI agent solving user inquiries using the ReAct loop.\n"
                 "You have access to the following tools:\n"
                 f"{format_tools_prompt(tools_registry)}\n\n"
-                "Use the exact format:\n"
+                "CRITICAL RULES:\n"
+                "1. In each turn, output ONLY ONE Thought and ONE Action, then STOP immediately.\n"
+                "2. DO NOT write 'Observation:' or fake the tool output yourself. The system will run the tool and supply the real Observation.\n"
+                "3. For all return/refund inquiries, after calculating the refund, you MUST call process_refund(order_id, refund_amount, reason) to enforce company financial approval safety gates.\n"
+                "4. When finished, output 'Thought: ...' followed by 'Final Answer: ...'. If human manager approval is required, explicitly state 'HUMAN APPROVAL REQUIRED' in the final answer.\n\n"
+                "Format for taking an action:\n"
                 "Thought: [Explain your reasoning on what to do next]\n"
-                "Action: [tool_name(param1=\"value\", ...)]\n"
-                "Observation: [Tool result will be inserted here]\n"
-                "... (Repeat Thought/Action/Observation as needed)\n"
+                "Action: [tool_name(param1=\"value\", ...)]\n\n"
+                "Format when ready to respond:\n"
                 "Thought: [Explain final conclusion]\n"
                 "Final Answer: [Your complete response to the user]\n"
             )
@@ -103,13 +115,16 @@ def run_react_agent(
                 # Prompt model for next thought/action
                 prompt = f"{system_instruction}\n\n{conversation_history}"
                 response = client.models.generate_content(
-                    model="gemini-2.0-flash",
+                    model="gemini-3.8-flash",
                     contents=prompt
                 )
                 output_text = response.text.strip() if response and response.text else ""
 
-                # Check if Final Answer is reached
-                if "Final Answer:" in output_text:
+                # If the model produced an Action, prioritize executing the tool
+                has_action = "Action:" in output_text
+                has_final = "Final Answer:" in output_text
+
+                if has_final and not has_action:
                     final_part = output_text.split("Final Answer:", 1)[1].strip()
                     thought_part = output_text.split("Final Answer:", 1)[0].replace("Thought:", "").strip()
                     steps_trace.append({
@@ -132,7 +147,8 @@ def run_react_agent(
                 if "Thought:" in output_text:
                     thought = output_text.split("Action:")[0].replace("Thought:", "").strip()
                 if "Action:" in output_text:
-                    action_str = output_text.split("Action:")[1].split("\n")[0].strip()
+                    action_line = output_text.split("Action:")[1].strip()
+                    action_str = action_line.split("\n")[0].strip()
 
                 parsed = parse_action_call(action_str)
                 if parsed:
@@ -151,8 +167,9 @@ def run_react_agent(
                 else:
                     break
         except Exception:
-            # Fall through to deterministic offline execution
-            pass
+            # Fall through to deterministic offline execution cleanly
+            steps_trace = []
+            hitl_flag = False
 
     # ==============================================================================
     # Deterministic Offline Execution Engine (Safe, Zero-Network-Dependency)

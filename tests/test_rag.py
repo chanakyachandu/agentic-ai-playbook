@@ -14,7 +14,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 chunking_mod = importlib.import_module("01_advanced_rag.chunking_strategies")
 retriever_mod = importlib.import_module("01_advanced_rag.hybrid_retriever")
 reranker_mod = importlib.import_module("01_advanced_rag.reranker")
-pipeline_mod = importlib.import_module("01_advanced_rag.rag_pipeline")
+generator_mod = importlib.import_module("01_advanced_rag.llm_generator")
+pipeline_mod = importlib.import_module("01_advanced_rag.pipeline")
 
 chunk_fixed_window = chunking_mod.chunk_fixed_window
 chunk_by_sections = chunking_mod.chunk_by_sections
@@ -24,6 +25,9 @@ dense_search = retriever_mod.dense_search
 hybrid_search = retriever_mod.hybrid_search
 rerank_candidates = reranker_mod.rerank_candidates
 extract_citations = reranker_mod.extract_citations
+format_context_block = generator_mod.format_context_block
+generate_grounded_response = generator_mod.generate_grounded_response
+run_pipeline = pipeline_mod.run_pipeline
 ask_rag = pipeline_mod.ask_rag
 load_knowledge_base = pipeline_mod.load_knowledge_base
 
@@ -128,3 +132,28 @@ def test_ask_rag():
     assert "citations" in result
     assert len(result["citations"]) > 0
     assert result["latency_ms"] >= 0.0
+
+
+def test_run_pipeline_single_call():
+    # Master pipeline runs end-to-end taking only the query
+    result = run_pipeline("laptop return window limit")
+
+    assert "query" in result
+    assert "answer" in result
+    assert "citations" in result
+    assert len(result["citations"]) > 0
+    assert result["latency_ms"] >= 0.0
+
+
+def test_llm_generator(sample_chunks):
+    # Step 4: Context formatting & grounded answer generation
+    context = format_context_block(sample_chunks[:2])
+    assert "[1] Source:" in context
+    assert "[2] Source:" in context
+
+    citations = [{"quote": "Return within 14 days", "source_file": "policy.txt", "section": "Returns"}]
+    ans = generate_grounded_response("return window", sample_chunks[:2], citations)
+    assert len(ans) > 0
+    assert "verified" in ans.lower() or "return" in ans.lower()
+
+

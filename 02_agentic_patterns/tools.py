@@ -10,17 +10,24 @@ from typing import Dict, Any, List, Optional
 
 def lookup_order(order_id: str, db_path: str = "data/ecommerce/orders_database.json") -> Dict[str, Any]:
     """
-    Looks up full order details by order_id (e.g. 'ORD-2026-1001').
+    Looks up full order details by order_id (e.g. 'ORD-2026-1001') from the local JSON file.
     Returns customer info, item details, delivery date, and order total.
     """
     clean_id = order_id.strip().upper()
     if not os.path.exists(db_path):
-        # Fallback path if running from subdirectories
-        alt_path = os.path.join("..", db_path)
-        if os.path.exists(alt_path):
-            db_path = alt_path
-        else:
-            return {"error": f"Database file not found: {db_path}"}
+        # Fallback path if running from subdirectories or anywhere in repo
+        candidates = [
+            os.path.join("..", db_path),
+            os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "ecommerce", "orders_database.json"),
+        ]
+        found = False
+        for c in candidates:
+            if os.path.exists(c):
+                db_path = c
+                found = True
+                break
+        if not found:
+            return {"error": f"Orders JSON file not found: {db_path}"}
 
     try:
         with open(db_path, "r", encoding="utf-8") as f:
@@ -43,7 +50,7 @@ def lookup_order(order_id: str, db_path: str = "data/ecommerce/orders_database.j
                 }
         return {"status": "NOT_FOUND", "message": f"Order ID {clean_id} does not exist in system."}
     except Exception as e:
-        return {"error": f"Failed reading orders database: {str(e)}"}
+        return {"error": f"Failed reading orders JSON file: {str(e)}"}
 
 
 def check_return_policy(category: str) -> Dict[str, Any]:

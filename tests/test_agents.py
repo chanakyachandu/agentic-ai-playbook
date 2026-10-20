@@ -14,6 +14,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 tools_mod = importlib.import_module("02_agentic_patterns.tools")
 react_mod = importlib.import_module("02_agentic_patterns.react_agent")
 plan_mod = importlib.import_module("02_agentic_patterns.plan_and_solve")
+pipeline_mod = importlib.import_module("02_agentic_patterns.pipeline")
 
 lookup_order = tools_mod.lookup_order
 check_return_policy = tools_mod.check_return_policy
@@ -25,6 +26,7 @@ run_react_agent = react_mod.run_react_agent
 plan_tasks = plan_mod.plan_tasks
 execute_plan = plan_mod.execute_plan
 reflect_and_correct = plan_mod.reflect_and_correct
+run_pipeline = pipeline_mod.run_pipeline
 
 
 def test_lookup_order_found():
@@ -95,3 +97,19 @@ def test_plan_and_solve_and_reflect():
     reflection = reflect_and_correct(goal, execution)
     assert "is_valid" in reflection
     assert len(reflection["critique_points"]) > 0
+
+
+def test_run_agent_pipeline_single_call():
+    # Master agent pipeline runs end-to-end taking only the customer request
+    query = "Customer wants to return order ORD-2026-1001. Please inspect order and calculate refund."
+    res = run_pipeline(query)
+
+    assert "query" in res
+    assert "resolution" in res
+    assert "hitl_triggered" in res
+    assert res["hitl_triggered"] is True
+    assert "HUMAN APPROVAL REQUIRED" in res["resolution"]
+    assert res["audit"] is not None
+    assert "latency_ms" in res
+    assert res["latency_ms"] >= 0.0
+
