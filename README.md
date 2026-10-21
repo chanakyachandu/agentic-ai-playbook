@@ -15,54 +15,44 @@ An enterprise-ready blueprint and reference hub for building, evaluating, and de
 
 ```mermaid
 flowchart TD
-    subgraph Client["🌐 Client & User Interface"]
-        REQ["User Request / Goal Prompt"]
-        UI["FastAPI SSE Streaming & Client APIs"]
+    %% Step 1: Request
+    CUST["👤 1. Customer Message<br/><i>'Can I return order ORD-2026-1001 for a refund?'</i>"]
+    
+    %% Step 2: Guard & Memory
+    FRONT["🛡️ 2. Safe Front Desk (Cache & Security Guard)<br/><i>Checks: Was this asked before? Any harmful code injection?</i>"]
+    
+    %% Step 3: Supervisor
+    BOSS["🧑‍💼 3. The Manager Robot (Supervisor)<br/><i>Breaks the request into 3 clear tasks for specialists</i>"]
+    
+    %% Step 4: Swarm
+    subgraph TEAM["🤝 4. The 3 Specialist Robots"]
+        direction TB
+        RESEARCH["🔍 The Researcher (Hybrid RAG)<br/><i>Finds the official return rules (14-day window, 15% restocking fee)</i>"]
+        ACCT["🧮 The Accountant (Tool Worker)<br/><i>Queries orders database ($3,499) and calculates net refund ($2,974.15)</i>"]
+        AUDIT["⚖️ The Inspector (Compliance Worker)<br/><i>Verifies order dates and runtime hours against policy rules</i>"]
     end
+    
+    %% Step 5: Financial Safety Gate
+    GATE{"🚨 5. Financial Safety Gate<br/>Is refund > $500?"}
+    
+    HUMAN["👨‍💼 Safe Route: Manager Review (HITL)<br/><i>Paused for human sign-off (Prevents unauthorized payout)</i>"]
+    AUTO["⚡ Fast Route: Instant Auto-Approval<br/><i>Approved automatically (≤ $500)</i>"]
+    
+    %% Step 6: Stream Response
+    STREAM["💬 6. Verified Customer Response<br/><i>FastAPI SSE streams verified answer word-by-word with rule citations</i>"]
 
-    subgraph Agents["🤖 Autonomous Agent Patterns"]
-        REACT["ReAct Loop: Thought ➔ Action ➔ Observation ➔ Answer"]
-        PLAN["Plan-and-Solve: Step-by-Step Task Decomposition"]
-        REFLECT["Reflexion: Self-Reflection & Policy Correction"]
-    end
-
-    subgraph Swarm["🐝 Hierarchical Multi-Agent Swarm (Part 3)"]
-        BOSS["Supervisor Agent: Goal Decomposition & Worker Delegation"]
-        RESEARCH["Retrieval Worker (Researcher): Hybrid RAG & Policy Grounding"]
-        ACCT["Tool Worker (Accountant): Orders DB & Restocking Math"]
-        AUDIT["Compliance Worker (Auditor): Invariants & Sanitary Gate"]
-    end
-
-    subgraph Tools["🛠️ Real-World Tool Execution"]
-        ORDER["Order Database Lookup (orders_database.json)"]
-        POLICY["Category Policy Validation (Laptops, Drones, Apparel)"]
-        CALC["Refund Math & Restocking Fee Deductions"]
-    end
-
-    subgraph RAG["🔍 Advanced Hybrid RAG Engine"]
-        CHUNK["Text Cleaning & Section-Aware Chunking"]
-        HYBRID["Hybrid Search: BM25 Lexical + Dense Vectors (RRF)"]
-        RERANK["Re-Ranking & Verifiable Citation Extraction"]
-    end
-
-    subgraph Safety["🛡️ Enterprise Financial Safety Gate"]
-        HITL["Human-in-the-Loop (HITL): Auto-approves <= $500, Pauses > $500"]
-    end
-
-    REQ --> REACT
-    REQ --> PLAN
-    REQ --> BOSS
+    CUST --> FRONT
+    FRONT --> BOSS
     BOSS --> RESEARCH
     BOSS --> ACCT
     BOSS --> AUDIT
-    RESEARCH --> RAG
-    ACCT --> Tools
-    AUDIT --> HITL
-    REACT --> Tools
-    PLAN --> Tools
-    Tools --> HITL
-    RAG --> UI
-    HITL --> UI
+    RESEARCH --> GATE
+    ACCT --> GATE
+    AUDIT --> GATE
+    GATE -- "Yes (> $500)" --> HUMAN
+    GATE -- "No (≤ $500)" --> AUTO
+    HUMAN --> STREAM
+    AUTO --> STREAM
 ```
 
 ---
@@ -165,5 +155,31 @@ pytest tests/ -v
 
 ---
 
+## 💡 How It All Works (In Plain English - Like Explaining to a School Kid)
+
+Imagine you bought a shiny new laptop from an electronics store, but after 10 days, you decide you want to return it. You message the store's customer service asking: *"Can I return order ORD-2026-1001 and get my refund?"* 
+
+A normal AI chatbot might guess the answer or make up a number. But this project builds an **automated team of smart robots** that handle everything safely and accurately:
+
+### 1. The Safe Front Desk
+When your message arrives, it first hits the store's front desk. If another customer asked an identical question two seconds ago, the system remembers the answer instantly (like looking at a cheat sheet) so it doesn't waste time. It also acts like a security guard at the door: if someone tries to type secret computer commands to delete the store's records, the shield blocks them on the spot.
+
+### 2. The Manager Robot (The Supervisor)
+Next, the message goes to the Manager Robot. The Manager doesn't try to guess or do all the work alone. Instead, it acts like a good team captain and assigns specific chores to three specialist robots:
+* **The Researcher Robot (The Bookworm)**: It opens the official store rulebook. It doesn't rely on memory; it searches the document for "Laptop returns" and reads the exact terms: *laptops can be returned within 14 days, cannot be used for more than 20 hours, and have a 15% restocking fee*.
+* **The Accountant Robot (The Math Wizard)**: It opens the company's order computer. It looks up order `ORD-2026-1001`, checks the purchase date, verifies the $3,499 price, and opens its calculator. It subtracts the 15% restocking fee ($524.85) to find the exact net refund: **$2,974.15**.
+* **The Inspector Robot (The Rule Checker)**: It compares what the Accountant found with what the Researcher read from the rulebook. It verifies that 10 days is within the 14-day limit and that everything matches store policy.
+
+### 3. The $500 Safety Gate (Human-in-the-Loop)
+Before any money is paid out, the team runs into a big safety rule:
+* If a refund is **$500 or less**, the system can approve it automatically.
+* But if a refund is **over $500** (like our $2,974.15 laptop!), the robots are **forbidden** from paying it alone. The system automatically pauses and rings the bell for a real human manager to review and authorize it. This guarantees that AI can never accidentally drain the company bank account.
+
+### 4. Delivering the Friendly Answer
+Finally, the Manager gathers all the facts and sends a polite message back to the customer's screen word-by-word (streaming): explaining that their laptop is eligible, showing the exact price and fee breakdown, and letting them know that a manager is reviewing their high-value payout.
+
+---
+
 ## 📄 License
 This project is open-source under the [MIT License](LICENSE).
+
